@@ -1,32 +1,27 @@
-from rest_framework.serializers import ModelSerializer
+from rest_framework import serializers
 
-from aac.library.models import (
-    Cover,
-    PublishingHouse,
-    Author,
-    Book
-)
+from aac.library import models
 
 
-class CoverSerializer(ModelSerializer):
+class CoverSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Cover
-        fields = '__all__'
+        model = models.Cover
+        fields = "__all__"
 
 
-class PublishingHouseSerializer(ModelSerializer):
+class PublishingHouseSerializer(serializers.ModelSerializer):
     class Meta:
-        model = PublishingHouse
-        fields = '__all__'
+        model = models.PublishingHouse
+        fields = "__all__"
 
 
-class AuthorSerializer(ModelSerializer):
+class AuthorSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Author
-        fields = '__all__'
+        model = models.Author
+        fields = "__all__"
 
 
-class BookSerializer(ModelSerializer):
+class BookSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Book
-        fields = '__all__'
+        model = models.Book
+        fields = "__all__"
